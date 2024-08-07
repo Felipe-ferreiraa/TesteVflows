@@ -1,6 +1,5 @@
 let submit = document.getElementById('submit')
 let anexo = document.getElementById('anexo')
-let ad_produto = document.getElementById('ad_produto')
 
 
 let qtd = document.getElementById('qtd')
@@ -95,11 +94,41 @@ function clear_p1(){
     document.getElementById('valor_un').value = '';
     document.getElementById('valor_total').value = '';
 }
+function clear_p2(){
+    document.getElementById('produto2').value = '';
+    document.getElementById('und2').value = 'Kg';
+    document.getElementById('qtd2').value = '';
+    document.getElementById('valor_un2').value = '';
+    document.getElementById('valor_total2').value = '';
+}
 
 document.getElementById('ad_produto').addEventListener('click', adicionarProduto);
 document.getElementById('clear_p1').addEventListener('click', clear_p1);
+document.getElementById('clear_p2').addEventListener('click', clear_p2);
 
 
 submit.addEventListener('click',function(){
-    alert('oi')
+    const razao = document.getElementById('razaosocial').value;
+    const cnpj = document.getElementById('cnpj').value;
+    const nome_fanta = document.getElementById('nome_fanta').value;
+    const ins_est = document.getElementById('ins_est').value;
+    const cep = document.getElementById('cep').value;
+    const ins_mun = document.getElementById('ins_mun').value;
+    const endereco = document.getElementById('endereco').value;
+    const numero = document.getElementById('numero').value;
+    const Complemento = document.getElementById('Complemento').value;
+    const bairro = document.getElementById('bairro').value;
+    const municipio = document.getElementById('municipio').value;
+    const estado = document.getElementById('estado').value;
+    const contato = document.getElementById('contato').value;
+    const cont_tel = document.getElementById('cont_tel').value;
+    const cont_email = document.getElementById('cont_email').value;
+
+    if(!razao || !cnpj || !nome_fanta || !cep || !endereco || !numero || !Complemento 
+        || !bairro || !municipio || !estado || !contato || !cont_tel || !cont_email)
+    {
+        alert("Todos os campos sao obrigatorios menos INSCRICAO ESTADUAL e INSCRICAO MUNICIPAL e precisa de pelo menos 1 produto cadastrado")
+    }else{
+
+    }
 })
