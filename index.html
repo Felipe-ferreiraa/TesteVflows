@@ -14,111 +14,114 @@
         <div class="conteiner-fluid">
             <form action="" class="form-inline" role="form">
                 <div class="row">
-                    <div class="col-sm-12 bg-warning p-2 rounded-1 text-white ">Dados do Fornecedor</div>
+                    <div class="col-sm-12 bg-primary p-2 rounded-1 text-white ">Dados do Fornecedor</div>
                 </div>
+                <div class="row border border-dark rounded-3">
                 <div class="row">
-                    <div class="col-8 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
+                    <div class="col-sm-8">
+                        <div class="form-group mt-3">
                             <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
+                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="" required>
                         </div>
                     </div>
-                    <div class="col-4 bg-warning">
-                        <div class="form-group mt-3 text-white bg-primary">
+                    <div class="col-4">
+                        <div class="form-group mt-3">
                             <label for="exampleInputEmail1"><b>CNPJ</b></label>
-                            <input type="text" class="form-control p-2" id="cnpj" placeholder="cnpj" required>
+                            <input type="text" class="form-control p-2" id="cnpj" placeholder="" required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
+                    <div class="col-8">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Nome Fantasia</b></label>
+                            <input type="text" class="form-control p-2" id="nome_fanta" placeholder="" required>
                         </div>
                     </div>
-                    <div class="col-4 bg-warning">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>CNPJ</b></label>
-                            <input type="text" class="form-control p-2" id="cnpj" placeholder="cnpj" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
-                        </div>
-                    </div>
-                    <div class="col-4 offset-4 bg-warning">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>CNPJ</b></label>
-                            <input type="text" class="form-control p-2" id="cnpj" placeholder="cnpj" required>
+                    <div class="col-4">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Inscrição Estadual</b></label>
+                            <input type="text" class="form-control p-2" id="ins_est" placeholder="" required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
+                    <div class="col-4">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Cep</b></label>
+                            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                            onblur="pesquisacep(this.value);" class="form-control p-2" placeholder="" required>
                         </div>
                     </div>
-                    <div class="col-4 bg-warning">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>CNPJ</b></label>
-                            <input type="text" class="form-control p-2" id="cnpj" placeholder="cnpj" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
+                    <div class="col-4 offset-4">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Inscrição Municipal</b></label>
+                            <input type="text" class="form-control p-2" id="ins_mun" placeholder="" required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-5 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
+                    <div class="col-8">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Endereço</b></label>
+                            <input type="text" class="form-control p-2" id="endereco" placeholder="" required>
                         </div>
                     </div>
-                    <div class="col-4 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
-                        </div>
-                    </div>
-                    <div class="col-3 bg-warning">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>CNPJ</b></label>
-                            <input type="text" class="form-control p-2" id="cnpj" placeholder="cnpj" required>
+                    <div class="col-4">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Numero</b></label>
+                            <input type="text" class="form-control p-2" id="numero" placeholder="" required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 bg-info">
-                        <div class="form-group mt-3 mb-4 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
+                    <div class="col-12">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Complemento</b></label>
+                            <input type="text" class="form-control p-2" id="Complemento" placeholder="" required>
                         </div>
                     </div>
-                    <div class="col-3 bg-info">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>Razao Social</b></label>
-                            <input type="text" class="form-control p-2" id="razaosocial" placeholder="Razao Social" required>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Bairro</b></label>
+                            <input type="text" class="form-control p-2" id="bairro" placeholder="" required>
                         </div>
                     </div>
-                    <div class="col-3 bg-warning">
-                        <div class="form-group mt-3 text-white bg-primary">
-                            <label for="exampleInputEmail1"><b>CNPJ</b></label>
-                            <input type="text" class="form-control p-2" id="cnpj" placeholder="cnpj" required>
+                    <div class="col-4 ">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Municipio</b></label>
+                            <input type="text" class="form-control p-2" id="municipio" placeholder="" required>
                         </div>
                     </div>
+                    <div class="col-3">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Estado</b></label>
+                            <input type="text" class="form-control p-2" id="estado" placeholder="" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 ">
+                        <div class="form-group mt-3 mb-4">
+                            <label for="exampleInputEmail1"><b>Nome da Pessoa de Contato</b></label>
+                            <input type="text" class="form-control p-2" id="contato" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Telefone</b></label>
+                            <input type="text" class="form-control p-2" id="cont_tel" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1"><b>Email</b></label>
+                            <input type="text" class="form-control p-2" id="cont_email" placeholder="" required>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <!--Fim primeiro form-->
                 <div class="row">
@@ -234,13 +237,43 @@
                         </div>
                     </div>
                 </form>
-            </form>
-            <div class="row">
-                <div class="col-sm-12 mt-4 bg-primary p-2 rounded-1 text-white ">Anexos</div>
                 <div class="row">
-                    <div class="col-1 bg-danger">1</div>
+                    <div class="col-sm-12 mt-4 bg-primary p-2 rounded-1 text-white ">Anexos</div>
                 </div>
-            </div>
+                <div class="row p-2 border border-dark">
+                    <div class="col-12 p-2">Itens</div>
+                        <div class="row">
+                            <div class="col-1 p-3 m-2 bg-info" >
+                                <button type="button" class="btn btn-default active bg-danger"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                </svg></button>
+                            </div>
+                            <div class="col-1 p-3 m-2 bg-info" >
+                                <button type="button" class="btn btn-default active bg-danger"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                </svg></button>
+                            </div>
+                            <div class="col-8">Documento Anexo 1</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 p-3 m-2 bg-info" >
+                                <button type="button" class="btn btn-default active bg-danger"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                </svg></button>
+                            </div>
+                            <div class="col-1 p-3 m-2 bg-info" >
+                                <button type="button" class="btn btn-default active bg-danger"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                </svg></button>
+                            </div>
+                            <div class="col-8">Documento Anexo 1</div>
+                        </div>
+                </div>
+            </form>  
         </div>
 
 
