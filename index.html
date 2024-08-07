@@ -49,8 +49,7 @@
                     <div class="col-4">
                         <div class="form-group mt-3">
                             <label for="exampleInputEmail1"><b>Cep</b></label>
-                            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                            onblur="pesquisacep(this.value);" class="form-control p-2" placeholder="" required>
+                            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" class="form-control p-2" placeholder="" required>
                         </div>
                     </div>
                     <div class="col-4 offset-4">
@@ -132,7 +131,7 @@
                     <div class="row border border-dark p-2">
                         <div class="row">
                             <div class="col-1 p-4 mt-3" >
-                                <button type="button" class="btn btn-default active bg-danger"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <button type="button" class="btn btn-default active bg-danger" id="clear_p1"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                                     <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
                                   </svg></button>
@@ -156,7 +155,7 @@
                                         <div class="col-2 offset-1">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1"><b>UND.Medida</b></label>
-                                                <select class="form-control">
+                                                <select class="form-control" id="und">
                                                     <option>Kg</option>
                                                     <option>Gr</option>
                                                     <option>L</option>
@@ -169,19 +168,19 @@
                                         <div class="col-3">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1"><b>QDTDE. em Estoque</b></label>
-                                                <input type="text" class="form-control p-2" id="QDTDE" placeholder="" required>
+                                                <input type="number" class="form-control p-2" id="qtd" placeholder="" required>
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1"><b>Valor Unitario</b></label>
-                                                <input type="text" class="form-control p-2" id="valor" placeholder="" required>
+                                                <input type="number" class="form-control p-2" id="valor_un" placeholder="" required>
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="form-group mb-4">
                                                 <label for="exampleInputEmail1"><b>Valor Total</b></label>
-                                                <input type="text" class="form-control p-2" id="valor_total" placeholder="" disabled>
+                                                <input type="number" class="form-control p-2" id="valor_total" placeholder="" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -190,12 +189,12 @@
                         </div>
                         <div class="row">
                             <div class="col-1 p-4 mt-3" >
-                                <button type="button" class="btn btn-default active bg-danger"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <button type="button" class="btn btn-default active bg-danger" id="clear_p2"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                                     <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
                                   </svg></button>
                             </div>
-                            <div class="col-11 mt-1 border border-dark"><b>PRODUTOS - 1</b>
+                            <div class="col-11 mt-1 border border-dark"><b>PRODUTOS - 2</b>
                                 <div class="row">
                                     <div class="col-1 mt-5 p-1"> 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
@@ -206,7 +205,7 @@
                                         <div class="col-12">
                                             <div class="form-group mt-3">
                                                 <label for="exampleInputEmail1"><b>Produto</b></label>
-                                                <input type="select" class="form-control p-2" id="produto" placeholder="" required>
+                                                <input type="select" class="form-control p-2" id="produto2" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +213,7 @@
                                         <div class="col-2 offset-1">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1"><b>UND.Medida</b></label>
-                                                <select class="form-control">
+                                                <select class="form-control" id="und2">
                                                     <option>Kg</option>
                                                     <option>Gr</option>
                                                     <option>L</option>
@@ -227,19 +226,19 @@
                                         <div class="col-3">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1"><b>QDTDE. em Estoque</b></label>
-                                                <input type="text" class="form-control p-2" id="QDTDE" placeholder="" required>
+                                                <input type="text" class="form-control p-2" id="qtd2" placeholder="" required>
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1"><b>Valor Unitario</b></label>
-                                                <input type="text" class="form-control p-2" id="valor" placeholder="" required>
+                                                <input type="text" class="form-control p-2" id="valor_un2" placeholder="" required>
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="form-group mb-4">
                                                 <label for="exampleInputEmail1"><b>Valor Total</b></label>
-                                                <input type="text" class="form-control p-2" id="valor_total" placeholder="" disabled>
+                                                <input type="text" class="form-control p-2" id="valor_total2" placeholder="" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -247,7 +246,7 @@
                             </div>
                         </div>
                         <div class="d-grid mt-4 mb-2 gap-2">
-                            <button class="btn btn-success" type="button">Adicionar Produto</button>
+                            <button class="btn btn-success" type="button" id="ad_produto">Adicionar Produto</button>
                         </div>
                     </div>
                 </form>
@@ -283,19 +282,43 @@
                                 </div>                                  
                             </div>
                             <div class="d-grid mt-4 mb-2 gap-2">
-                                <button class="btn btn-success" type="button">Incluir Anexo</button>
+                                <button class="btn btn-success" type="button" id="anexo">Incluir Anexo</button>
                             </div>
-                        
                     </div>
                 </div>
                 <div class="d-grid mt-4 mb-2 gap-2">
-                    <button class="btn btn-success" type="button">Salva o Fornecedor</button>
+                    <button class="btn btn-success" type="button" id="submit">Salva o Fornecedor</button>
                 </div>
             </form>  
         </div>
     </div>
-
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#cep').on('blur', function() {
+                var cep = $(this).val().replace(/\D/g, ''); // Remove caracteres não numéricos
+                if (cep.length === 8) {
+                    $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function(data) {
+                        if (!data.erro) {
+                            $('#endereco').val(data.logradouro);
+                            $('#bairro').val(data.bairro);
+                            $('#municipio').val(data.localidade);
+                            $('#estado').val(data.uf);
+                            $('#complemento').val(data.complemento || '');
+                        } else {
+                            alert('CEP não encontrado.');
+                        }
+                    }).fail(function() {
+                        alert('Erro ao buscar CEP.');
+                    });
+                } else {
+                    alert('CEP inválido.');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
