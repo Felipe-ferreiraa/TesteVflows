@@ -11,6 +11,7 @@ let valor_total2
 
 let i = 0;
 let produtos = []
+let fornecedores = []
 
 valor_un.addEventListener('change',function(){
     valor_total = document.getElementById('valor_total')
@@ -125,10 +126,31 @@ submit.addEventListener('click',function(){
     const cont_email = document.getElementById('cont_email').value;
 
     if(!razao || !cnpj || !nome_fanta || !cep || !endereco || !numero || !Complemento 
-        || !bairro || !municipio || !estado || !contato || !cont_tel || !cont_email)
+        || !bairro || !municipio || !estado || !contato || !cont_tel || !cont_email || produtos.length == 0)
     {
         alert("Todos os campos sao obrigatorios menos INSCRICAO ESTADUAL e INSCRICAO MUNICIPAL e precisa de pelo menos 1 produto cadastrado")
     }else{
+        const fornecedorOBJ = {
+            razao: razao,
+            cnpj: cnpj,
+            nome_fanta: nome_fanta,
+            ins_est: ins_est,
+            cep: cep,
+            ins_mun: ins_mun,
+            endereco: endereco,
+            numero: numero,
+            Complemento: Complemento,
+            bairro: bairro,
+            municipio: municipio,
+            estado: estado,
+            contato: contato,
+            cont_tel: cont_tel,
+            cont_email: cont_email,
+            produtos: produtos
+        }
 
+        fornecedores.push(fornecedorOBJ);
+
+        console.log(fornecedores)
     }
 })
